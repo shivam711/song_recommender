@@ -16,6 +16,8 @@ songs_data = [
     {"song_id": 8, "song_name": "Summertime Sadness", "artist": "Lana Del Rey", "genre": "Alternative"},
     {"song_id": 9, "song_name": "Take Five", "artist": "Dave Brubeck", "genre": "Jazz"},
     {"song_id": 10, "song_name": "So What", "artist": "Miles Davis", "genre": "Jazz"},
+    {"song_id": 11, "song_name": "So", "artist": "Miles", "genre": "Classical"},
+    {"song_id": 11, "song_name": "Love Dose", "artist": "Honey Singh", "genre": "Punjabi"},
     # Add more songs as needed
 ]
 
@@ -30,7 +32,7 @@ def extract_genre(user_input):
     # Process user input with spaCy
     doc = nlp(user_input.lower())
     # Look for genre in the user's input
-    genres = ["pop", "rock", "jazz", "funk", "ballad", "alternative"]
+    genres = ["pop", "rock", "jazz", "funk", "ballad", "classical", "punjabi", "alternative"]
     for token in doc:
         if token.text in genres:
             return token.text.capitalize()
